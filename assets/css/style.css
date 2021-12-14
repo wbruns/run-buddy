@@ -1,0 +1,50 @@
+/* removes default browser styling for elements */
+/* the * is a universal selector */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* this is how you write a note in CSS */
+    color: #39a6b2;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* stylings for the header */
+header {
+    padding: 20px 35px;
+    background-color: #39a6b2;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #fce138;
+    margin: 0;
+    /* allows list to display inline with h1 */
+    display: inline;
+}
+
+header a {
+    /* removes hyperlink styling */
+    text-decoration: none;
+    color: #fce138;
+}
+
+header nav {
+    /* puts the nav on the right of the screen */
+    float: right;
+    margin: 7px 0;
+}
+
+header nav ul li {
+    /* changes list from block-level element display to inline element */
+    display: inline;
+}
+
+header nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+}
