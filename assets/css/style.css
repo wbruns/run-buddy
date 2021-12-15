@@ -130,3 +130,28 @@ section {
     font-size: 16px;
 }
 /* hero styles and form styles end */
+
+.intro {
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 55px;
+    color: #024e76;
+    margin-bottom: 35px;
+    padding: 0 100px 20px 100px;
+    border-bottom: 3px solid;
+    border-color: #fce138;
+    /* makes border the size of an inline element but 
+    allows things like padding to be affected like a block */
+    display: inline-block;
+}
+
+.intro p {
+    line-height: 1.7;
+    color: #39a6b2;
+    width: 80%;
+    font-size: 20px;
+    /* horizontally centers elements with a width less than 100% */
+    margin: 0 auto;
+}
