@@ -1,3 +1,10 @@
+/* creating custom properties for popular colors */
+:root {
+    --primary-color: #fce138;
+    --secondary-color: #024e76;
+    --tertiary-color: #39a6b2;
+}
+
 /* removes default browser styling for elements */
 /* the * is a universal selector */
 * {
@@ -9,14 +16,14 @@
 
 body {
     /* this is how you write a note in CSS */
-    color: #39a6b2;
+    color: var(--tertiary-color);
     font-family: Helvetica, Arial, sans-serif;
 }
 
 /* stylings for the header */
 header {
     padding: 20px 35px;
-    background-color: #39a6b2;
+    background-color: var(--tertiary-color);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -36,7 +43,7 @@ header {
 header h1 {
     font-weight: bold;
     font-size: 36px;
-    color: #fce138;
+    color: var(--primary-color);
     margin: 0;
     /* making text shadows */
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -45,7 +52,7 @@ header h1 {
 header a {
     /* removes hyperlink styling */
     text-decoration: none;
-    color: #fce138;
+    color: var(--primary-color);
 }
 
 header nav {
@@ -67,14 +74,14 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background: #fce138;
-    color: #024e76;
+    background: var(--primary-color);
+    color: var(--secondary-color);
     border-radius: 15px;
     text-shadow: none;
 }
 
 footer {
-    background: #fce138;
+    background: var(--primary-color);
     width: 100%;
     padding: 40px 35px;
     display: flex;
@@ -83,7 +90,7 @@ footer {
 }
 
 footer h2 {
-    color: #024e76;
+    color: var(--secondary-color);
     font-size: 30px;
     margin: 0;
     font-weight: normal;
@@ -95,7 +102,7 @@ footer div {
 }
 
 footer a {
-    color: #024e76;
+    color: var(--secondary-color);
 }
 
 section {
@@ -128,16 +135,16 @@ section {
 .hero-cta h2 {
     font-style: italic;
     font-size: 55px;
-    color: #fce138;
+    color: var(--primary-color);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* hero form styles start */
 .hero-form {
-    color: #024e76;
+    color: var(--secondary-color);
     padding: 20px;
     background-color: rgba(252, 225, 56, 0.8);
-    border: 3px solid #024e76;
+    border: 3px solid var(--secondary-color);
     width: 40%;
     margin: 3.5%;
     /* adding box shadow */
@@ -156,11 +163,11 @@ section {
 }
 
 .form-input {
-    border: 1px solid #024e76;
+    border: 1px solid var(--secondary-color);
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: #024e76;
+    color: var(--secondary-color);
     width: 100%;
     margin-bottom: 15px;
     border-radius: 10px;
@@ -197,7 +204,7 @@ using absolute positioning to put it on top */
     height: 20px;
     width: 20px;
     background: rgba(255, 255, 255, 0.75);
-    border: 1px solid #024e76;
+    border: 1px solid var(--secondary-color);
     position: absolute;
     top: -4px;
     left: -30px;
@@ -214,20 +221,20 @@ using absolute positioning to put it on top */
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #024e76;
+    background: var(--secondary-color);
     position: absolute;
     left: -29px;
     top: -3px;
     /* replacing bg color with a gradient */
-    background-image: radial-gradient(circle, #39a6b2, #024e76);
+    background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
 }
 
 .checkbox-wrapper label::after {
     content: "";
     height: 6px;
     width: 14px;
-    border-left: 2px solid #024e76;
-    border-bottom: 2px solid #024e76;
+    border-left: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
     position: absolute;
     left: -26px;
     top: 1px;
@@ -247,8 +254,8 @@ using absolute positioning to put it on top */
 }
 
 .hero-form button {
-    color: #fce138;
-    background-color: #024e76;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -256,13 +263,13 @@ using absolute positioning to put it on top */
 }
 
 .hero-form button:hover {
-    background-color: #39a6b2;
+    background-color: var(--tertiary-color);
 }
 /* hero styles and form styles end */
 
 .intro p {
     line-height: 1.7;
-    color: #39a6b2;
+    color: var(--tertiary-color);
     width: 80%;
     font-size: 20px;
     /* horizontally centers elements with a width less than 100% */
@@ -271,7 +278,7 @@ using absolute positioning to put it on top */
 }
 
 .steps {
-    background: #fce138;
+    background: var(--primary-color);
 }
 
 .step {
@@ -285,11 +292,11 @@ using absolute positioning to put it on top */
 }
 
 .step:not(:last-child) {
-    border-bottom: 1px solid #39a6b2;
+    border-bottom: 1px solid var(--tertiary-color);
 }
 
 .step h3 {
-    color: #024e76;
+    color: var(--secondary-color);
     font-size: 46px;
     flex: 1 30%;
 }
@@ -315,19 +322,19 @@ using absolute positioning to put it on top */
 }
 
 .step-text p {
-    color: #39a6b2;
+    color: var(--tertiary-color);
     font-size: 18px;
 }
 
 .step-text h4 {
     font-size: 26px;
     line-height: 1.5;
-    color: #024e76;
+    color: var(--secondary-color);
 }
 
 .section-title {
     font-size: 48px;
-    color: #024e76;
+    color: var(--secondary-color);
     border-bottom: 3px solid;
     padding-bottom: 20px;
     text-align: center;
@@ -336,11 +343,11 @@ using absolute positioning to put it on top */
 }
 
 .primary-border {
-    border-color: #fce138;
+    border-color: var(--primary-color);
 }
 
 .secondary-border {
-    border-color: #39a6b2;
+    border-color: var(--tertiary-color);
 }
 
 /* meet the trainers style */
@@ -354,8 +361,8 @@ using absolute positioning to put it on top */
 
 .trainer {
     margin: 20px;
-    background: #024e76;
-    color: #fce138;
+    background: var(--secondary-color);
+    color: var(--primary-color);
     flex: 1;
 }
 
@@ -384,7 +391,7 @@ using absolute positioning to put it on top */
 
 /* reach out styles */
 .contact {
-    background: #024e76;
+    background: var(--secondary-color);
 }
 
 .contact-info {
@@ -399,7 +406,7 @@ using absolute positioning to put it on top */
 }
 
 .contact h2 {
-    color: #fce138;
+    color: var(--primary-color);
 }
 
 .contact-info iframe {
@@ -411,7 +418,7 @@ using absolute positioning to put it on top */
 }
 
 .contact-info h3 {
-    color: #fce138;
+    color: var(--primary-color);
     font-size: 32px;
 }
 
@@ -423,11 +430,11 @@ using absolute positioning to put it on top */
 }
 
 .contact-form input, .contact-form textarea {
-    border: 1px solid #024e76;
+    border: 1px solid var(--secondary-color);
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: #024e76;
+    color: var(--secondary-color);
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
@@ -443,8 +450,8 @@ using absolute positioning to put it on top */
 .contact-form button {
     width: 100%;
     border: none;
-    background: #fce138;
-    color: #024e76;
+    background: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
@@ -452,12 +459,12 @@ using absolute positioning to put it on top */
 }
 
 .contact-form button:hover {
-    color: #fce138;
-    background: #39a6b2;
+    color: var(--primary-color);
+    background: var(--tertiary-color);
 }
 
 .contact-info a {
-    color: #fce138;
+    color: var(--primary-color);
 }
 
 .text-left {
